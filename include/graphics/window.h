@@ -1,3 +1,5 @@
+#pragma once
+
 #include <SDL3/SDL.h>
 #include <string>
 #include "../Core/Structs.h"

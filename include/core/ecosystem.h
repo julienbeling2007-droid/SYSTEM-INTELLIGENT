@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Entity.h"
 #include "Structs.h"
 #include <vector>
@@ -61,7 +63,7 @@ private:
     // 🔐 MÉTHODES PRIVÉES
     void UpdateStatistics();
     void SpawnRandomEntity(EntityType type);
-    Vector2D GetRandomPosition() const;
+    Vector2D GetRandomPosition();
     void HandlePlantGrowth(float deltaTime);
 };
 

@@ -1,5 +1,7 @@
-#include "../Graphics/Window."
-#include "Ecosystem.hpp"
+#pragma once
+
+#include "../Graphics/Window.h"
+#include "Ecosystem.h"
 #include <chrono>
 
 namespace Ecosystem {

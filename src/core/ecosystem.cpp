@@ -167,7 +167,7 @@ void Ecosystem::SpawnRandomEntity(EntityType type) {
 }
 
 // 🎯 POSITION ALÉATOIRE
-Vector2D Ecosystem::GetRandomPosition() const {
+Vector2D Ecosystem::GetRandomPosition() {
     std::uniform_real_distribution<float> distX(0.0f, mWorldWidth);
     std::uniform_real_distribution<float> distY(0.0f, mWorldHeight);
     return Vector2D(distX(mRandomGenerator), distY(mRandomGenerator));
