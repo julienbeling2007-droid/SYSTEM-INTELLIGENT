@@ -88,6 +88,7 @@ void Entity::Move(float deltaTime) {
     }
     
     // 📐 Application du mouvement
+    position = StayInBounds(1200.0f,800.0f);
     position = position + mVelocity * deltaTime * 20.0f;
     
     // 🔄 Consommation d'énergie due au mouvement
@@ -208,5 +209,20 @@ void Entity::Render(SDL_Renderer* renderer) const {
     }
 }
 
-} // namespace Core
-} // namespace Ecosystem
+//implementation de la fonction stayInBounds
+Vector2D Entity::StayInBounds (float worldWidth, float worldHeight) const {
+    Vector2D emplacement=position;
+    if(emplacement.x < 6.0f) emplacement.x = 6.0f;
+    if(emplacement.y < 6.0f) emplacement.y = 6.0f;
+    if(emplacement.x > worldWidth) emplacement.x = worldWidth - 6.0f;
+    if(emplacement.y > worldHeight) emplacement.y = worldHeight - 6.0f;
+    return emplacement;
+}
+
+    
+    
+
+
+
+}// namespace Core
+}// namespace Ecosystem
