@@ -218,11 +218,13 @@ Vector2D Entity::StayInBounds (float worldWidth, float worldHeight) const {
     if(emplacement.y > worldHeight) emplacement.y = worldHeight - 6.0f;
     return emplacement;
 }
+//Vector2D Entity::SeekFood(const std::vector<Food>& foodSources) const {
+    
 
     
     
 
 
 
-}// namespace Core
+}// namespace Core}
 }// namespace Ecosystem
